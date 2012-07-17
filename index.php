@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
+
     <head>
-
-        <title>
-            <?php bloginfo('name') ?>
-
-            <?php if (is_404()) : ?> 
-                &raquo; <?php _e('Not Found') ?>
-            <?php elseif (is_home()) : ?> 
-                &raquo; <?php bloginfo('description') ?>
-            <?php else : ?>
-                <?php wp_title() ?>
-            <?php endif ?>
-       
-        </title>
-
-        <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-        <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-        <!-- leave this for stats -->
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-        <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
-        <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
-        <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><?php wp_head(); ?>
-
-        <?php wp_get_archives('type=monthly&format=link'); ?>
-        <?php //comments_popup_script(); // off by default ?>
-        <?php wp_head(); ?>
-
+        <title>Title</title>
     </head>
+
+
     <body>
 
-        <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-        <?php bloginfo('description'); ?>
+        <header>
+            <div id="header-logo">Site Logo</div>
+            <div id="header-slogan">Site Slogan</div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Articles</li>
+            </ul>
+        </nav>
 
+        <div id="slideshow">
+            Slideshow
+        </div>
+        
+        <aside>
+            Sidebar 1
+        </aside>
+        
+        <section>
+
+            <article>
+                <h1>Title of the Article</h1>
+                <p>Some lorem ispum text of your post goes here. The article's text ends.</p>
+            </article>
+
+        </section>
+
+        <aside>
+            Sidebar 2
+        </aside>
+        
+       
+        <footer>
+            <aside>Box 1</aside>
+            <aside>Box 2</aside>
+            <aside>Box 3</aside>
+            
+            <nav>Secondary Links</nav>
+        </footer>
     </body>
-
 </html>
